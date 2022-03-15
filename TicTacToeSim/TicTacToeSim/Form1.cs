@@ -45,12 +45,16 @@ namespace TicTacToeSim
                 {
                     numArray[x, o] = rando.Next(0, 2);
 
+                    //if the numArray at index x,o is... 
                     switch (numArray[x, o])
                     {
+                        //0, then print letter O to txtArray and add 1 to oCount
                         case 0:
                             txtArray[x, o] = "O";
                             oCount++;
                             break;
+
+                        //1, then print letter X to txtArray and add 1 to xCount
                         default:
                             txtArray[x, o] = "X";
                             xCount++;
@@ -61,7 +65,7 @@ namespace TicTacToeSim
         }
         private void ShowXandO()
         {
-            //display randomized X & O
+            //display randomized X & O 
             xAndOsLabel0.Text = txtArray[0, 0];
             xAndOsLabel1.Text = txtArray[0, 1];
             xAndOsLabel2.Text = txtArray[0, 2];
@@ -83,7 +87,6 @@ namespace TicTacToeSim
                 if (txtArray[1, 1].Equals(val))
                     return true;
             }
-
 
             //check diag left to right vals
             if ((txtArray[0, 0] == txtArray[1, 1]) &&

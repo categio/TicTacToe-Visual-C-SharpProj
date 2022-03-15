@@ -76,32 +76,35 @@ namespace TicTacToeSim
             // 
             // playButton
             // 
+            this.playButton.BackColor = System.Drawing.Color.LavenderBlush;
             this.playButton.Location = new System.Drawing.Point(15, 434);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(126, 43);
             this.playButton.TabIndex = 2;
             this.playButton.Text = "&Play";
-            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // clearButton
             // 
+            this.clearButton.BackColor = System.Drawing.Color.LavenderBlush;
             this.clearButton.Location = new System.Drawing.Point(149, 434);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(126, 43);
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "&Clear";
-            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.LavenderBlush;
             this.exitButton.Location = new System.Drawing.Point(283, 434);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(126, 43);
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "E&xit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // xAndOsLabel0
@@ -214,7 +217,7 @@ namespace TicTacToeSim
             // 
             // ticTacToeGroupBox
             // 
-            this.ticTacToeGroupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ticTacToeGroupBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ticTacToeGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ticTacToeGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ticTacToeGroupBox.Font = new System.Drawing.Font("Eras Demi ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,6 +232,7 @@ namespace TicTacToeSim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(426, 493);
             this.Controls.Add(this.xAndOsLabel8);
             this.Controls.Add(this.xAndOsLabel7);

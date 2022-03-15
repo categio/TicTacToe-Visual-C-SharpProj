@@ -38,31 +38,35 @@ namespace TicTacToeSim
         private void RandomArray()
         {
             Random rando = new Random();
-
-            for (int x = 0; x < 3; x++)
+            //as long as index is less than 3, add new letter to col
+            for (int col = 0; col < 3; col++)
             {
-                for (int o = 0; o < 3; o++)
+                //as long as the index is less than 3, add new letter to row
+                for (int row = 0; row < 3; row++)
                 {
-                    numArray[x, o] = rando.Next(0, 2);
+                    numArray[col, row] = rando.Next(0, 2);
 
-                    //if the numArray at index x,o is... 
-                    switch (numArray[x, o])
-                    {
-                        //0, then print letter O to txtArray and add 1 to oCount
+                    //if the numArray at index col,row is... 
+                    switch (numArray[col, row])
+                    { 
+                    
+                        // is 0, then print letter O to txtArray and add 1 to oCount
                         case 0:
-                            txtArray[x, o] = "O";
+                            txtArray[col, row] = "O";
                             oCount++;
                             break;
 
-                        //1, then print letter X to txtArray and add 1 to xCount
+                        //is 1, then print letter X to txtArray and add 1 to xCount
                         default:
-                            txtArray[x, o] = "X";
+                            txtArray[col, row] = "X";
                             xCount++;
                             break;
                     }
                 }
             }
         }
+
+        //prints the values held in txtArray to the form's output labels 
         private void ShowXandO()
         {
             //display randomized X & O 
@@ -76,7 +80,7 @@ namespace TicTacToeSim
             xAndOsLabel7.Text = txtArray[2, 1];
             xAndOsLabel8.Text = txtArray[2, 2];
         }
-
+        //checks for win diagonally, per col, per row
         //diagonal winner?
         private Boolean IsDiagWin(string val)
         {
@@ -130,30 +134,14 @@ namespace TicTacToeSim
             return false;
         }
 
-
+        //prints the winning X or O, and if tied.
         private void IsWinner()
         {
-            if (IsDiagWin("X"))
+            if ((IsDiagWin("X")) || (IsColWin("X")) || (IsRowWin("X")))
             {
                 winOutputLabel.Text = "The X has Won!";
             }
-            else if (IsDiagWin("O"))
-            {
-                winOutputLabel.Text = "The O has Won!";
-            }
-            else if (IsColWin("X"))
-            {
-                winOutputLabel.Text = "The X has Won!";
-            }
-            else if (IsColWin("O"))
-            {
-                winOutputLabel.Text = "The O has Won!";
-            }
-            else if (IsRowWin("X"))
-            {
-                winOutputLabel.Text = "The X has Won!";
-            }
-            else if (IsRowWin("O"))
+            else if ((IsDiagWin("O")) || (IsColWin("O")) || (IsRowWin("O")))
             {
                 winOutputLabel.Text = "The O has Won!";
             }

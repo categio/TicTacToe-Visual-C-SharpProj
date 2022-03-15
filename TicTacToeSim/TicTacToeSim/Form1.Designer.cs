@@ -221,6 +221,7 @@ namespace TicTacToeSim
             this.ticTacToeGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ticTacToeGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ticTacToeGroupBox.Font = new System.Drawing.Font("Eras Demi ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticTacToeGroupBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.ticTacToeGroupBox.Location = new System.Drawing.Point(54, 55);
             this.ticTacToeGroupBox.Name = "ticTacToeGroupBox";
             this.ticTacToeGroupBox.Size = new System.Drawing.Size(325, 314);
